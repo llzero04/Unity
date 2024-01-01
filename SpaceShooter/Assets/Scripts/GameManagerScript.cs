@@ -15,12 +15,16 @@ public class GameManagerScript : MonoBehaviour
     public Text gameOverScore;
     public GameObject gameOverUI;
 
+    int highScore;
+
     // Start is called before the first frame update
     void Start()
     {
         ammo = 10; score = 0;
         changeScoreText();
         changeAmmoText();
+
+        highScore = PlayerPrefs.GetInt("HighScore", 0);
     }
 
     // Update is called once per frame
@@ -32,7 +36,7 @@ public class GameManagerScript : MonoBehaviour
     public void incrementScore(int increment)
     {
         score += increment;
-        Debug.Log(score);
+        // Debug.Log(score);
         changeScoreText();
     }
 
@@ -60,8 +64,11 @@ public class GameManagerScript : MonoBehaviour
         // GameObject gameOverUI = GameObject.FindGameObjectWithTag("GameOverUI");
         // gameOverUI.SetActive(true);
 
+        highScore = highScore >= score ? highScore : score;
+        PlayerPrefs.SetInt("HighScore", highScore);
+
         gameOverUI.SetActive(true);
-        gameOverScore.text = "Your score is " + score.ToString();
+        gameOverScore.text = "Your Score is " + score.ToString() + "\n\n" + "Your High Score is " + highScore.ToString();
     }
 
     public void restartLevel()
