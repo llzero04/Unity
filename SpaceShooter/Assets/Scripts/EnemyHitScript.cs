@@ -22,8 +22,10 @@ public class EnemyHitScript : MonoBehaviour
     {
         if(other.gameObject.tag.Equals("Laser") == true)
         {
-            GameObject newParticleSystem = Instantiate(enemyDestroyParticle);
-            newParticleSystem.transform.position = gameObject.transform.position;
+            GameObject.Instantiate(enemyDestroyParticle, transform.position, Quaternion.Euler(270, 0, 0));
+            // GameObject newParticleSystem = Instantiate(enemyDestroyParticle);
+            // newParticleSystem.transform.position = gameObject.transform.position;
+
             FindAnyObjectByType<GameManagerScript>().incrementScore(100);
             Destroy(other.gameObject);
             Destroy(transform.parent.gameObject);
