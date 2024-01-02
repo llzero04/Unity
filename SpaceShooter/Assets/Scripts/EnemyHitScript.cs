@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class EnemyHitScript : MonoBehaviour
 {
+    public GameObject enemyDestroyParticle;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +22,8 @@ public class EnemyHitScript : MonoBehaviour
     {
         if(other.gameObject.tag.Equals("Laser") == true)
         {
+            GameObject newParticleSystem = Instantiate(enemyDestroyParticle);
+            newParticleSystem.transform.position = gameObject.transform.position;
             FindAnyObjectByType<GameManagerScript>().incrementScore(100);
             Destroy(other.gameObject);
             Destroy(transform.parent.gameObject);
