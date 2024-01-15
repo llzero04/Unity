@@ -8,7 +8,7 @@ public class EndCreditsManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        FindObjectOfType<AudioManager>().stopAudio("GameBackgroundTheme");
     }
 
     // Update is called once per frame
