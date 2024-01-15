@@ -4,6 +4,8 @@ Breakout is the recreation of the breakout game from atari which is one of the m
 
 To try out, You can find the .exe file in the Builds folder. Just clone the repo and the game might open up ;)<br/>
 
+The ball movement is a bit wonky right now, but will try to fix the mechanics.<br/>
+
 Please let me know of any issues or bugs or suggestions. Will try to improvise the game more. Enjoy Gaming. THANK YOU!!
 
 # Controls:
