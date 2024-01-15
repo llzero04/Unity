@@ -41,12 +41,12 @@ public class PlayerMovement : MonoBehaviour
             Destroy(gameObject);
         }
 
-        if(Input.GetKeyDown(KeyCode.W)) 
+        if(Input.GetKeyDown(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)) 
         {
             jumpFlag = true;
         }
 
-        if(Input.GetKey(KeyCode.A))
+        if(Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
             // if(transform.rotation.y != -180) transform.Rotate(0 , 180 , 0);
             if(direction != 1)
@@ -58,7 +58,7 @@ public class PlayerMovement : MonoBehaviour
             forceDirection = -1;
         }
 
-        if(Input.GetKey(KeyCode.D)) 
+        if(Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) 
         {
             if(direction != 0)
             {
