@@ -11,3 +11,8 @@ Please let me know of any issues or bugs or suggestions. Will try to improvise t
 You can move the bar using the below : <br/>
 W or S => To move red bar<br/>
 Up Arrow or Down Arrow => To move blue bar<br/>
+
+# Known Issues:
+
+Currently there is only the two player mode working.
+Will add single player mode which will be a rally mode.
