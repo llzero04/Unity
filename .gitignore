@@ -13,3 +13,6 @@ Breakout/Library/
 Breakout/Temp/
 Pong/Library/
 Pong/Temp/
+Pong/
+Breakout/Builds/Windows/v1/Breakout_BurstDebugInformation_DoNotShip/
+Pong/Builds/Windows/v0/Pong_BurstDebugInformation_DoNotShip/
